@@ -47,6 +47,8 @@ export default function createDeployContractStep({
       }
 
       state[key] = contract.address
+      console.log("Deployed Contract: " +contract.address+" In Tx: "+contract?.deployTransaction?.hash)
+
 
       return [
         {

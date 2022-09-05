@@ -15,6 +15,8 @@ export default function createDeployLibraryStep({
       const library = await factory.deploy({ gasPrice })
       state[key] = library.address
 
+      console.log("Deployed Library: " +library.address+" In Tx: "+library?.deployTransaction?.hash)
+
       return [
         {
           message: `Library ${contractName} deployed`,
